@@ -1,8 +1,9 @@
-.npmignore
-.gitignore
 /src
 /node_modules
-package-lock.json
+/dist/test/*.d.ts
+.npmignore
+.gitignore
 .prettierignore
 .prettierrc.json
+package-lock.json
 tsconfig.json

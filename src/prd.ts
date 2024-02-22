@@ -18,7 +18,7 @@
  * @see https://gaming.stackexchange.com/questions/161430/calculating-the-constant-c-in-dota-2-pseudo-random-distribution
  *
  */
-export default class PRDEvent {
+export default class PrdRng {
 	private _percentage: number;
 	private _coeff: number;
 	private _percNow: number;

@@ -1,4 +1,4 @@
-import PRDEvent from '../prd';
+import PrdRng from '../prd';
 
 /**
  * Run a random event 100 million times with pseudo random determination,
@@ -6,7 +6,7 @@ import PRDEvent from '../prd';
  */
 function main() {
 	let percentage: number = getPercentageFromArguments();
-	let event: PRDEvent = new PRDEvent(percentage);
+	let event: PrdRng = new PrdRng(percentage);
 	let succInstances: number = 0;
 	let timer: [number, number] = process.hrtime();
 	for (let i: number = 0; i < 100000000; i++) {

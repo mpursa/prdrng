@@ -1,0 +1,28 @@
+{
+  "name": "prdrng",
+  "version": "1.0.0",
+  "description": "Pseudo random distribution rng calculator",
+  "author": {
+    "name": "mpursa",
+    "email": "m.pretto93@gmail.com",
+    "url": "https://github.com/mpursa"
+  },
+  "main": "dist/prd.js",
+  "types": "dist/prd.d.ts",
+  "scripts": {
+    "test": "node dist/test/index.ts",
+    "prepublish": "tsc",
+    "build": "tsc"
+  },
+  "license": "BSD-2-Clause",
+  "keywords": [
+    "rng",
+    "pseudo-random distribution",
+    "prd",
+    "DotA"
+  ],
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}

@@ -11,9 +11,9 @@ npm install prdrng --save
 ## Usage
 
 ```javascript
-import PRDEvent from 'prdrng';
+import PrdRng from 'prdrng';
 
-let event = new PRDEvent(25);
+let event = new PrdRng(25);
 // Run event as many times as necessary.
 // These probabilities average out so that, 
 // over a moderate period of time, the success rate will be 25%.

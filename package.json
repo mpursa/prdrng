@@ -10,7 +10,7 @@
   "main": "dist/prd.js",
   "types": "dist/prd.d.ts",
   "scripts": {
-    "test": "node dist/test/index.ts",
+    "test": "node dist/test/prdtest.js",
     "prepublish": "tsc",
     "build": "tsc"
   },

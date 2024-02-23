@@ -1,27 +1,31 @@
 import PrdRng from '../prd';
 
 /**
- * Run a random event 100 million times with pseudo random determination,
- * then log the result.
+ * Run a random event 100 million times with
+ * pseudo random distribution, then log the result.
  */
 function main() {
+	let times: number = 100000000;
 	let percentage: number = getPercentageFromArguments();
+
+	let timerC: [number, number] = process.hrtime();
 	let event: PrdRng = new PrdRng(percentage);
+	timerC = process.hrtime(timerC);
+
+	console.log(`Event stated percentage -> ${event.percentage}%`);
+	console.log(`Event PRD coefficient -> ${event.coeff}`);
+	console.log(`PRD coefficient calculation time -> ${timerC[0]}.${timerC[1]} s`);
+
 	let succInstances: number = 0;
 	let timer: [number, number] = process.hrtime();
-	for (let i: number = 0; i < 100000000; i++) {
-		let success = event.run();
+	for (let i: number = 0; i < times; i++) {
+		let success: boolean = event.run();
 		succInstances += success ? 1 : 0;
 	}
 	timer = process.hrtime(timer);
-	console.log(`Event has been run 100000000 times`);
-	console.log(`Event has been successfull ${succInstances} times`);
-	console.log(`Event stated percentage was ${event.percentage}%`);
-	console.log(`Event PRD coefficient was ${event.coeff.toFixed(15)}`);
-	console.log(
-		`Event had effective percentage of ${((succInstances / 100000000) * 100).toFixed(4)}%`
-	);
-	console.log(`Time elapsed is ${timer[0]},${timer[1]} s`);
+	console.log(`Event has been run ${times} times`);
+	console.log(`Effective percentage -> ${((succInstances / times) * 100).toFixed(6)}%`);
+	console.log(`Time elapsed -> ${timer[0]}.${timer[1]} s`);
 	process.exit(0);
 }
 

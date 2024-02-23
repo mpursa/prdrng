@@ -1,0 +1,6 @@
+[1.0.2]
+
+  - Faster coefficient calculation (up to 5x) using set values for integer percentages.
+  - Added warning for small (< 0.4) percentage values.
+  
+--------------------------------

@@ -104,12 +104,14 @@ export default class PrdRng {
 	 */
 	private cFromP(p: number): number {
 		if (BASEC[p] !== undefined) return BASEC[p];
+
+		let cUpper: number = BASEC[Math.ceil(p)] / 100;
+		let cLower: number = BASEC[Math.floor(p)] / 100;
 		p /= 100;
-		let cUpper: number = BASEC[Math.ceil(p)] / 1000;
-		let cLower: number = BASEC[Math.floor(p)] / 1000;
 		let cMid: number;
 		let p1: number = 0;
 		let p2: number = 1;
+
 		while (true) {
 			cMid = (cUpper + cLower) / 2;
 			p1 = this.cFromCMid(cMid);

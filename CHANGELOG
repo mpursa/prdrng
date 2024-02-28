@@ -1,3 +1,9 @@
+[1.0.3]
+
+  - Fixed starting value selection.
+  
+--------------------------------
+
 [1.0.2]
 
   - Faster coefficient calculation (up to 5x) using set values for integer percentages.

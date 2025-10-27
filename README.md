@@ -7,8 +7,7 @@ First run
 ```bash
 npm install prdrng --save
 ```
-
-## Usage
+then
 
 ```javascript
 import PrdRng from 'prdrng';

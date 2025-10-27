@@ -1,6 +1,6 @@
 {
   "name": "prdrng",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Pseudo random distribution rng calculator",
   "author": {
     "name": "mpursa",
@@ -14,7 +14,7 @@
     "prepublish": "tsc",
     "build": "tsc"
   },
-  "license": "BSD-2-Clause",
+  "license": "ISC",
   "keywords": [
     "rng",
     "pseudo-random distribution",
@@ -23,6 +23,6 @@
   ],
   "devDependencies": {
     "ts-node": "^10.9.1",
-    "typescript": "^4.7.4"
+    "typescript": "^5.9.3"
   }
 }

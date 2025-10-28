@@ -12,12 +12,15 @@ then
 ```javascript
 import PrdRng from 'prdrng';
 
-let event = new PrdRng(25);
-// Run event as many times as necessary.
-// These probabilities average out so that, 
-// over a moderate period of time, the success rate will be 25%.
-for (let i = 0; i < 1000; i++)
-  let success = event.run();
+// Set the probability percentage in the constructor.
+// In this example case, set it to 25%.
+const event = new PrdRng(25);
+// Run event as many times as necessary by calling run().
+// The probabilities of success average out so that, 
+// over a moderate amount, the success rate will be 25%.
+let success: boolean = event.run();
+// The percentage coefficient is automatically updated inside of PrdRng.run().
+  
 ```
 
 ## More info on pseudo-random distibution
